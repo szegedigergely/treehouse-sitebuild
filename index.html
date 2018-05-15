@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="content.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <svg style="display: none">
+        <symbol id="icon-logo" >
+            <path fill="#64c772" d="M28.4,7c-0.4-0.2-1.3-0.6-2.3-1.2c-1.1-0.6-2.8,0.4-3.9,2.1l-1.9,3.2c-0.7,1.4-0.6,2.9,0.3,4.2l0.1,0.1
+            c0.9,1.3,2.1,2.4,2.4,2.8c0.2,0.2,0.4,0.6,0.5,0.9c0.3,1.2-0.3,2.3-1.5,2.6c-1.1,0.3-2.3-0.4-2.7-1.5c-0.1-0.3-0.1-0.6-0.1-0.9
+            c0.1-0.5-0.1-1.3-0.8-1.9c-0.7-0.8-2.1,0.7-2.5,2.1v0.1c-0.4,1.5-0.7,2.7-0.6,2.8c0,0.1,0.1,0.2,0.1,0.2c0.6,1.2,0.2,2.6-1,3.2
+            s-2.7,0.2-3.3-1s-0.2-2.6,1-3.2c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.3-0.7,0.6-1.4c0.2-0.7,0.4-1.3,0.4-1.3c0-0.1,0-0.2,0.1-0.2l1.2-4.2
+            l-1.2,2.5c-0.2-0.5-0.4-0.5-1-0.1c-0.3,0.2-0.9,0.7-1.1,0.9c-0.5,0.4-0.9,1.1-1.1,1.5c-0.1,0.3-0.3,0.5-0.5,0.7
+            c-0.9,0.8-2.3,0.6-3-0.3s-0.5-2.1,0.4-2.8c0.3-0.2,0.6-0.4,0.9-0.4c0.5-0.1,2.4-1.3,3.5-2c0.2-0.1,0.4-0.3,0.5-0.4l2.9-2.1l-2.6,1.4
+            c0,0-0.3,0-0.6,0c-0.8,0.1-1.8,0.2-2,0.5c-0.1,0.1-0.2,0.3-0.4,0.4c-0.8,0.4-2,0.2-2.7-0.6c-0.6-0.9-0.4-2,0.4-2.6
+            c0.5-0.3,0.9-0.4,1.3-0.4c0.7,0,2.5,0.4,4,0.1l0.4-0.1c1.5-0.3,3.3-1.5,4-2.9c0,0,0.7-1.3,1.6-2.7c0.9-1.5,0.8-3.1-0.1-3.7l-1.7-1
+            c-0.9-0.5-2.3-0.5-3.2,0L1.6,6.8C0.7,7.3,0,8.6,0,9.6v12.8c0,1,0.7,2.1,1.6,2.6l11.9,6.6c0.9,0.5,2.3,0.5,3.2,0l11.7-6.7
+            c0.9-0.5,1.6-1.6,1.6-2.6V9.6C30,8.6,29.3,7.5,28.4,7z"></path>
+        </symbol>
+        <symbol id="icon-treehouse">
+            <path fill="#ffffff" d="M42.8,21c-0.4,0.1-0.9,0.2-1.4,0.2c-1,0-1.4-0.6-1.4-1.6v-4.5h2.8c0.7,0,1.4-0.5,1.4-1.3s-0.6-1.3-1.4-1.3
+            H40V11c0-0.9-0.7-1.5-1.5-1.5S37,10.2,37,11v8.7c0,2.5,1.2,4.3,4,4.3c0.8,0,1.9-0.1,2.7-0.5c0.7-0.3,0.9-0.8,0.9-1.3
+            C44.6,21.5,43.9,20.8,42.8,21z M52.8,12.1c-0.4-0.1-1.2-0.2-1.9-0.2c-2.5,0-3.9,1.5-3.9,3.8v6.8c0,0.8,0.7,1.5,1.5,1.5
+            s1.5-0.7,1.5-1.5v-6.2c0-1,0.4-1.4,1.1-1.4c0.7,0,1.1,0.2,1.7,0.2c0.9,0,1.4-0.8,1.4-1.4C54.1,12.9,53.7,12.4,52.8,12.1z M61.1,11.9
+            c-2.8,0-4.8,1.8-5.1,4.7c0,0.7-0.1,1.9,0,2.8c0.2,2.8,2.2,4.7,5.2,4.7c1.4,0,2.7-0.3,3.5-0.8c0.6-0.4,0.7-0.8,0.7-1.2
+            c0-0.8-0.7-1.6-1.9-1.2c-0.7,0.3-1.5,0.5-2.3,0.5c-1.4,0-2.5-0.7-2.5-2.1V19h5.7c1,0,1.5-0.6,1.5-1.5V17C66,13.9,64,11.9,61.1,11.9z
+                M63,17h-4.2c0-1.5,0.7-2.5,2.3-2.5c1.4,0,2.2,0.9,2.1,2.2C63.2,16.9,63.2,17,63,17z M73.1,11.9c-2.8,0-4.8,1.8-5.1,4.7
+            c0,0.7-0.1,1.9,0,2.8c0.2,2.8,2.2,4.7,5.2,4.7c1.4,0,2.7-0.3,3.5-0.8c0.6-0.4,0.7-0.8,0.7-1.2c0-0.8-0.7-1.6-1.9-1.2
+            c-0.7,0.3-1.5,0.5-2.3,0.5c-1.4,0-2.5-0.7-2.5-2.1V19h5.7c1,0,1.5-0.6,1.5-1.5V17C78,13.9,76,11.9,73.1,11.9z M75,17h-4.2
+            c0-1.5,0.7-2.5,2.3-2.5c1.4,0,2.2,0.9,2.1,2.2C75.2,16.9,75.2,17,75,17z M123.6,16.9l-1.6-0.4c-1-0.2-1.3-0.5-1.3-1s0.5-0.9,1.6-0.9
+            c0.6,0,1.3,0.2,1.9,0.5c0.7,0.4,1.5,0.3,1.9-0.2c0.5-0.5,0.5-1.4-0.1-2c-0.8-0.6-2.2-1-3.6-1c-2.6,0-4.5,1.3-4.5,3.7
+            c0,1.9,1.4,2.9,3.2,3.4c0.9,0.2,0.8,0.2,1.6,0.4c0.9,0.2,1.3,0.6,1.3,1c0,0.6-0.5,1-1.7,1c-1,0-1.9-0.3-2.6-0.7
+            c-0.7-0.5-1.5-0.3-1.9,0.3c-0.4,0.6-0.3,1.4,0.3,1.8c0.8,0.7,2.1,1.3,4.2,1.3c2.6,0,4.6-1.4,4.6-3.8
+            C126.9,18.5,125.8,17.4,123.6,16.9z M137.5,19c1,0,1.5-0.6,1.5-1.5l0,0V17c0-3.1-2-5.1-4.9-5.1c-2.8,0-4.8,1.8-5.1,4.7
+            c0,0.7-0.1,1.9,0,2.8c0.2,2.8,2.2,4.7,5.2,4.7c1.4,0,2.7-0.3,3.5-0.8c0.6-0.4,0.7-0.8,0.7-1.2c0-0.8-0.7-1.6-1.9-1.2
+            c-0.7,0.3-1.5,0.5-2.3,0.5c-1.4,0-2.5-0.7-2.5-2.1V19H137.5z M134.1,14.5c1.4,0,2.2,0.9,2.1,2.2c0,0.2-0.1,0.3-0.2,0.3h-4.2
+            C131.8,15.5,132.6,14.5,134.1,14.5z M97.5,11.9c-3,0-5.2,1.9-5.5,4.5c-0.1,0.9-0.1,2.3,0,3.2c0.2,2.6,2.5,4.5,5.5,4.5
+            s5.2-1.9,5.4-4.5c0.1-0.9,0.1-2.2,0-3.1C102.7,13.8,100.5,11.9,97.5,11.9z M99.9,19.1c-0.1,1.3-1,2.1-2.4,2.1s-2.3-0.9-2.4-2.1
+            c0-0.6,0-1.6,0-2.2c0.1-1.3,1-2.1,2.4-2.1s2.3,0.9,2.4,2.1C100,17.5,100,18.5,99.9,19.1z M85.6,11.9c-1.1,0-2.3,0.4-2.7,0.9l0,0V9.6
+            c0-0.9-0.6-1.5-1.4-1.5s-1.4,0.7-1.4,1.5v12.9c0,0.8,0.7,1.5,1.5,1.5s1.4-0.7,1.4-1.5v-6.7c0.5-0.5,1.3-0.9,2.3-0.9
+            c1.2,0,1.9,0.7,1.9,2.1v5.5c0,0.9,0.6,1.6,1.4,1.6c0.9,0,1.5-0.7,1.5-1.6v-5.7C90,13.6,88.4,11.9,85.6,11.9z M113.6,12
+            c-0.8,0-1.5,0.7-1.5,1.5v7.1c-0.5,0.3-1.2,0.6-2.1,0.6c-1.2,0-2.1-0.7-2.1-2.1v-5.6c0-0.9-0.7-1.6-1.5-1.6c-0.9,0-1.4,0.7-1.4,1.6
+            v5.7c0,3.1,1.8,4.8,4.9,4.8c2.3,0,3.9-0.8,4.6-1.3c0.4-0.2,0.5-0.5,0.5-1v-8.2C115,12.7,114.4,12,113.6,12z"></path>
+        </symbol>
+        <symbol id="icon-treehouse-ff">
+            <path fill="#374047" d="M42.8,21c-0.4,0.1-0.9,0.2-1.4,0.2c-1,0-1.4-0.6-1.4-1.6v-4.5h2.8c0.7,0,1.4-0.5,1.4-1.3s-0.6-1.3-1.4-1.3
+            H40V11c0-0.9-0.7-1.5-1.5-1.5S37,10.2,37,11v8.7c0,2.5,1.2,4.3,4,4.3c0.8,0,1.9-0.1,2.7-0.5c0.7-0.3,0.9-0.8,0.9-1.3
+            C44.6,21.5,43.9,20.8,42.8,21z M52.8,12.1c-0.4-0.1-1.2-0.2-1.9-0.2c-2.5,0-3.9,1.5-3.9,3.8v6.8c0,0.8,0.7,1.5,1.5,1.5
+            s1.5-0.7,1.5-1.5v-6.2c0-1,0.4-1.4,1.1-1.4c0.7,0,1.1,0.2,1.7,0.2c0.9,0,1.4-0.8,1.4-1.4C54.1,12.9,53.7,12.4,52.8,12.1z M61.1,11.9
+            c-2.8,0-4.8,1.8-5.1,4.7c0,0.7-0.1,1.9,0,2.8c0.2,2.8,2.2,4.7,5.2,4.7c1.4,0,2.7-0.3,3.5-0.8c0.6-0.4,0.7-0.8,0.7-1.2
+            c0-0.8-0.7-1.6-1.9-1.2c-0.7,0.3-1.5,0.5-2.3,0.5c-1.4,0-2.5-0.7-2.5-2.1V19h5.7c1,0,1.5-0.6,1.5-1.5V17C66,13.9,64,11.9,61.1,11.9z
+                M63,17h-4.2c0-1.5,0.7-2.5,2.3-2.5c1.4,0,2.2,0.9,2.1,2.2C63.2,16.9,63.2,17,63,17z M73.1,11.9c-2.8,0-4.8,1.8-5.1,4.7
+            c0,0.7-0.1,1.9,0,2.8c0.2,2.8,2.2,4.7,5.2,4.7c1.4,0,2.7-0.3,3.5-0.8c0.6-0.4,0.7-0.8,0.7-1.2c0-0.8-0.7-1.6-1.9-1.2
+            c-0.7,0.3-1.5,0.5-2.3,0.5c-1.4,0-2.5-0.7-2.5-2.1V19h5.7c1,0,1.5-0.6,1.5-1.5V17C78,13.9,76,11.9,73.1,11.9z M75,17h-4.2
+            c0-1.5,0.7-2.5,2.3-2.5c1.4,0,2.2,0.9,2.1,2.2C75.2,16.9,75.2,17,75,17z M123.6,16.9l-1.6-0.4c-1-0.2-1.3-0.5-1.3-1s0.5-0.9,1.6-0.9
+            c0.6,0,1.3,0.2,1.9,0.5c0.7,0.4,1.5,0.3,1.9-0.2c0.5-0.5,0.5-1.4-0.1-2c-0.8-0.6-2.2-1-3.6-1c-2.6,0-4.5,1.3-4.5,3.7
+            c0,1.9,1.4,2.9,3.2,3.4c0.9,0.2,0.8,0.2,1.6,0.4c0.9,0.2,1.3,0.6,1.3,1c0,0.6-0.5,1-1.7,1c-1,0-1.9-0.3-2.6-0.7
+            c-0.7-0.5-1.5-0.3-1.9,0.3c-0.4,0.6-0.3,1.4,0.3,1.8c0.8,0.7,2.1,1.3,4.2,1.3c2.6,0,4.6-1.4,4.6-3.8
+            C126.9,18.5,125.8,17.4,123.6,16.9z M137.5,19c1,0,1.5-0.6,1.5-1.5l0,0V17c0-3.1-2-5.1-4.9-5.1c-2.8,0-4.8,1.8-5.1,4.7
+            c0,0.7-0.1,1.9,0,2.8c0.2,2.8,2.2,4.7,5.2,4.7c1.4,0,2.7-0.3,3.5-0.8c0.6-0.4,0.7-0.8,0.7-1.2c0-0.8-0.7-1.6-1.9-1.2
+            c-0.7,0.3-1.5,0.5-2.3,0.5c-1.4,0-2.5-0.7-2.5-2.1V19H137.5z M134.1,14.5c1.4,0,2.2,0.9,2.1,2.2c0,0.2-0.1,0.3-0.2,0.3h-4.2
+            C131.8,15.5,132.6,14.5,134.1,14.5z M97.5,11.9c-3,0-5.2,1.9-5.5,4.5c-0.1,0.9-0.1,2.3,0,3.2c0.2,2.6,2.5,4.5,5.5,4.5
+            s5.2-1.9,5.4-4.5c0.1-0.9,0.1-2.2,0-3.1C102.7,13.8,100.5,11.9,97.5,11.9z M99.9,19.1c-0.1,1.3-1,2.1-2.4,2.1s-2.3-0.9-2.4-2.1
+            c0-0.6,0-1.6,0-2.2c0.1-1.3,1-2.1,2.4-2.1s2.3,0.9,2.4,2.1C100,17.5,100,18.5,99.9,19.1z M85.6,11.9c-1.1,0-2.3,0.4-2.7,0.9l0,0V9.6
+            c0-0.9-0.6-1.5-1.4-1.5s-1.4,0.7-1.4,1.5v12.9c0,0.8,0.7,1.5,1.5,1.5s1.4-0.7,1.4-1.5v-6.7c0.5-0.5,1.3-0.9,2.3-0.9
+            c1.2,0,1.9,0.7,1.9,2.1v5.5c0,0.9,0.6,1.6,1.4,1.6c0.9,0,1.5-0.7,1.5-1.6v-5.7C90,13.6,88.4,11.9,85.6,11.9z M113.6,12
+            c-0.8,0-1.5,0.7-1.5,1.5v7.1c-0.5,0.3-1.2,0.6-2.1,0.6c-1.2,0-2.1-0.7-2.1-2.1v-5.6c0-0.9-0.7-1.6-1.5-1.6c-0.9,0-1.4,0.7-1.4,1.6
+            v5.7c0,3.1,1.8,4.8,4.9,4.8c2.3,0,3.9-0.8,4.6-1.3c0.4-0.2,0.5-0.5,0.5-1v-8.2C115,12.7,114.4,12,113.6,12z"></path>
+        </symbol>
+        <symbol id="icon-blog">
+            <path fill="#6f7276" d="M186.562,22.584a5.026,5.026,0,0,1-1.392,3.933,5.366,5.366,0,0,1-3.716,1.245,5.782,5.782,0,0,1-3.426-.925c-.074-.052-.128-.093-.2-.149
+            a.56.56,0,0,1-.132-.878c.248-.324.5-.384.78-.17l.166.125a4.475,4.475,0,0,0,2.784.814q3.492,0,3.822-3.276l-.147.068
+            a8.448,8.448,0,0,1-3.085.649,4.737,4.737,0,0,1-3.588-1.27,4.569,4.569,0,0,1-1.213-3.292V16.647
+            a4.531,4.531,0,0,1,1.226-3.3,4.771,4.771,0,0,1,3.576-1.258,8.4,8.4,0,0,1,3.229.812q1.207.583,1.294,1.071
+            a.148.148,0,0,1,.02.078C186.55,17.7,186.562,22.584,186.562,22.584ZM185.282,14.3l-.05-.033a6.57,6.57,0,0,0-1.221-.609,5.95,5.95,0,0,0-1.941-.436,3.68,3.68,0,0,0-2.682.9,3.375,3.375,0,0,0-.919,2.527
+            v2.811a3.357,3.357,0,0,0,.932,2.515,3.622,3.622,0,0,0,2.643.912,6.044,6.044,0,0,0,1.838-.333,6.49,6.49,0,0,0,1.173-.536
+            c.085-.054.161-.1.23-.135C185.284,20.282,185.282,16.35,185.282,14.3Zm-16.154,9.722a4.54,4.54,0,0,1-3.269-1.368,4.322,4.322,0,0,1-1.4-3.193V16.6
+            a4.281,4.281,0,0,1,1.379-3.168,4.556,4.556,0,0,1,3.295-1.344,4.635,4.635,0,0,1,3.295,1.332,4.233,4.233,0,0,1,1.4,3.181v2.86
+            a4.318,4.318,0,0,1-1.417,3.181A4.562,4.562,0,0,1,169.128,24.019Zm3.448-7.422a3.254,3.254,0,0,0-1.022-2.342,3.293,3.293,0,0,0-2.426-1.036,3.494,3.494,0,0,0-3.422,3.378
+            v2.86a3.34,3.34,0,0,0,1.009,2.379,3.232,3.232,0,0,0,2.413,1.048,3.274,3.274,0,0,0,2.426-1.048,3.321,3.321,0,0,0,1.022-2.379
+            ZM159.83,23.871a.625.625,0,0,1-.434-.16.5.5,0,0,1-.179-.382V8.485a.461.461,0,0,1,.179-.37.658.658,0,0,1,.434-.148.7.7,0,0,1,.46.148.462.462,0,0,1,.179.37V23.329
+            a.5.5,0,0,1-.192.37A.647.647,0,0,1,159.83,23.871Zm-9.154.148a8.4,8.4,0,0,1-3.229-.812q-1.254-.606-1.3-1.109
+            V22.08l0-.019V8.485a.461.461,0,0,1,.179-.37.658.658,0,0,1,.434-.148.7.7,0,0,1,.46.148.462.462,0,0,1,.179.37v4.341
+            c.063-.03.127-.061.2-.092a8.448,8.448,0,0,1,3.085-.649,4.737,4.737,0,0,1,3.588,1.27,4.569,4.569,0,0,1,1.213,3.292
+            v2.811a4.531,4.531,0,0,1-1.226,3.3A4.771,4.771,0,0,1,150.676,24.019Zm3.55-7.373a3.357,3.357,0,0,0-.932-2.515,3.622,3.622,0,0,0-2.643-.912,6.044,6.044,0,0,0-1.838.333,6.49,6.49,0,0,0-1.173.536
+            c-.091.057-.171.1-.243.142V21.8l.067.044a6.57,6.57,0,0,0,1.221.609,5.95,5.95,0,0,0,1.941.436,3.68,3.68,0,0,0,2.682-.9,3.375,3.375,0,0,0,.919-2.527Z"></path>
+        </symbol>
+    </svg>
+    <nav id="navigation">
+        <section>
+            <a href="http://www.teamtreehouse.com" class="brand">
+                <svg class="treehouse-icon" viewBox="0 0 188 32" preserveAspectRatio="xMinYMin meet" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use class="icon-logo" xlink:href="#icon-logo"><svg></svg></use>
+                    <use class="icon-treehouse" xlink:href="#icon-treehouse" />
+                    <use class="icon-blog" xlink:href="#icon-blog" />
+                </svg>
+            </a>
+            <div id="search-bar">
+                <input type="text" placeholder="Search" />
+                <button type="submit">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMinYMin meet">
+                        <path id="XMLID_10_" d="M.763,23.6a1.5,1.5,0,0,0,1.1.4,1.5,1.5,0,0,0,1.1-.4l6.6-6.6
+                        a9.056,9.056,0,0,0,4.9,1.4,9.2,9.2,0,1,0-9.1-9.2,9.072,9.072,0,0,0,2,5.8l-6.5,6.4
+                        A1.677,1.677,0,0,0,.763,23.6Zm13.7-8.2a6.2,6.2,0,1,1,0-12.4,6.2,6.2,0,1,1,0,12.4Z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-nav-toggle">
+                <a href="#" id="nav-toggle" data-nav-toggle="">
+                    <span class="hamburger"></span>
+                </a>
+            </div>
+            <div id="nav-list">
+                <ul>
+                    <li class="nav-item nav-item-main">
+                    <a href="#" class="nav-anchor">Websites</a>
+                    </li>
+                    <li class="nav-item nav-item-main">
+                    <a href="#" class="nav-anchor">Coding</a>
+                    </li>
+                    <li class="nav-item nav-item-main">
+                    <a href="#" class="nav-anchor">iOS</a>
+                    </li>
+                    <li class="nav-item nav-item-main">
+                    <a href="#" class="nav-anchor">Android</a>
+                    </li>
+                    <li class="nav-item nav-item-main">
+                    <a href="#" class="nav-anchor">Business</a>
+                    </li>
+                    <li class="nav-item nav-item-free-trial">
+                    <a href="#" class="nav-anchor">Start learning for free</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </nav>
+    <div id="container">
+        <div class="row">
+            <div class="content col col-sm12 col-md-8 col-lg-9">
+                <article>
+                    <div class="gadgets clearfix">
+                        <a href="#" class="float-left"><b>August 8, 2012</b></a>
+                        <a href="#" class="float-right"><b>Next&nbsp;&rightarrow;</b></a>
+                        <a href="#" class="float-right"><b>&leftarrow;&nbsp;Previous</b></a>
+                    </div>
+
+                    <h1 class="post-title">Beginner’s Guide to Responsive Web Design</h1>
+                    <div class="meta">
+                        <span class="author"><b><a href="http://blog.teamtreehouse.com/author/nickpettit">Nick Pettit</a></b></span>
+                        <span class="meta-separator">&bull;</span>
+                        <span class="category"><b><a href="#">Make a website</a></b></span>
+                        <span class="meta-separator">&bull;</span>
+                        <span class="comments"><b><a href="#">214 Comments</a></b></span>
+                    </div>
+                    <div class="article-wrapper">
+                        <p><img src="img/opening.jpg" alt="Opening image - source: pinterest.com"></p>
+                        <p>Whether you’re a beginner or a seasoned web professional, creating responsive designs can be confusing at first, mostly because of the radical change in thinking that’s required. As time goes on, <a href="http://teamtreehouse.com/library/websites/build-a-responsive-website" target="_blank">responsive web design</a> is drifting away from the pool of passing fads and rapidly entering the realm of standard practice. In fact, the magnitude of this paradigm shift feels as fundamental as the transition from table based layouts to CSS. Simply put, this is a very different way of designing websites and it represents the future.</p>
+                        <p style="background-color: #fefefe; padding: 20px 26px; border-radius: 5px; border-top: solid 4px #5fcf80; margin: 36px 0; font-size: 14px;"><strong>Free trial on Treehouse:</strong> Do you want to learn more about <a href="http://teamtreehouse.com/library/websites/build-a-responsive-website" target="_blank">responsive web design</a>? Try a <a href="https://teamtreehouse.com/subscribe/plans?cid=2112&amp;utm_source=popular-43-beginner-guide-responsive-web-design&amp;trial=yes" target="_blank">free trial on Treehouse</a>.</p>
+                        <p>Over the past year, responsive design has become quite the hot topic in the web design community. If all the buzz has you feeling like Rip Van Winkle waking up in the 21st century, this summary will help you catch up with the times.</p>
+                        <p><span id="more-43"></span></p>
+                        <h1 id="what_is_responsive_design">What is responsive web design?</h1>
+                        <p>Let’s just get right into it: Believe it or not, the Treehouse blog that you’re reading this article on is actually a responsive design! To see it in action, open this article on a desktop browser and slowly make the browser thinner and wider. You should see the layout magically adjust itself to more comfortably fit the new width of the browser, even if you make the page as skinny as the resolution of a mobile phone. Here are some screenshots of what the Think Vitamin design looks like at various screen resolutions:</p>
+                        <p><img src="http://i.imgur.com/Y98Nc.jpg" alt="The first stage of Think Vitamin's responsive design."></p>
+                        <p><img src="http://i.imgur.com/IG3ox.jpg" alt="The second stage of Think Vitamin's responsive design."></p>
+                        <p><img src="http://i.imgur.com/hRDhv.jpg" alt="The third and fourth stages of Think Vitamin's responsive design."></p>
+                        <p>It’s hard to talk about responsive design without mentioning its creator, Ethan Marcotte. If you haven’t read his <a href="http://www.alistapart.com/articles/responsive-web-design/">seminal article about responsive web design</a>, I highly recommend you check it out (seriously, this is required reading). In the article, Ethan discusses all the key ideas that form responsive web design; and that’s really what responsive design is, technically. It’s not a single piece of technology, but rather, a set of techniques and ideas that form a whole. This is one of the main sources of confusion, and in a moment we’ll break things down and take a look at each part.</p>
+                        <p>So, what is responsive design exactly? Actually, a better question to ask might be, what problem does responsive web design solve? Well, as you may have noticed, computers aren’t the only piece of hardware with a web browser anymore. I might get myself in trouble by saying this, but the iPhone was one of the first mobile devices to feature a really great web browser, and it really put the spotlight on upgrading the experience of the mobile web. Many other devices followed suit and, seemingly overnight, the face of the mobile web had changed.</p>
+                        <p>The changing landscape of web browsers meant that users expectations also changed; people expected to be able to browse the web on their phones just as easily as they browse the web on a desktop computer. So, in response to this (if you’ll excuse the pun) the web design community started creating mobile versions of their websites. In hindsight, this wasn’t really the way forward, but at the time it seemed like a reasonable idea. Every website would have their normal ‘desktop’ version of their site, and as a bonus, a ‘mobile’ version.</p>
+                        <p>Technology never stops marching forward, so not long after the phone hardware market had been revolutionized, other form factors surged in popularity. In addition to phones and personal computers, devices like touchscreen tablets and small notebook computers (netbooks, if you prefer the term) started appearing everywhere.</p>
+                        <p>It’s not just small screens, either. Large, high-resolution displays are starting to become much more common than they used to be, and it would be a waste for web designers to not take advantage of this.</p>
+                        <p>In summary, the spectrum of screen sizes and resolutions is widening every day, and creating a different version of a website that targets each individual device is not a practical way forward. This is the problem that responsive web design addresses head on.</p>
+                        <p>Previously, I mentioned that responsive web design is not a single piece of technology, but rather, a collection of techniques and ideas. Now that we have a better idea of the problem space we’re addressing, let’s take a look at each part of the solution.</p>
+                        <h2 id="fluid_grids">Fluid Grids</h2>
+                        <p>The first key idea behind responsive design is the usage of what’s known as a fluid grid. In recent memory, creating a ‘liquid layout’ that expands with the page hasn’t been quite as popular as creating fixed width layouts; page designs that are a fixed number of pixels across, and then centered on the page. However, when one considers the huge number of screen resolutions present in today’s market, the benefit of liquid layouts is too great to ignore.</p>
+                        <p>Fluid grids go a few steps beyond the traditional liquid layout. Instead of designing a layout based on rigid pixels or arbitrary percentage values, a fluid grid is more carefully designed in terms of proportions. This way, when a layout is squeezed onto a tiny mobile device or stretched across a huge screen, all of the elements in the layout will resize their widths in relation to one another.</p>
+                        <p>In order to calculate the proportions for each page element, you must divide the target element by its context. Currently, the best way to do this is to first create a high fidelity mockup in a pixel based imaged editor, like Photoshop. With your high fidelity mockup in hand, you can measure a page element and divide it by the full width of the page. For example, if your layout is a typical size like 960 pixels across, then this would be your “container” value. Then, let’s say that our target element is some arbitrary value, like 300 pixels wide. If we multiply the result by 100, we get the percentage value of 31.25% which we can apply to the target element. Here’s the math:</p>
+                        <p><img src="http://i.imgur.com/zFzyg.png" alt="300 / 960 = 0.3125 or 31.25%"></p>
+                        <p>If your values don’t work out so neatly, and you get some floating point value with many numbers after the decimal, don’t round the value! We humans may enjoy nice neat numbers and making our code look pretty, but your computer (and the final look of your design) will benefit from the seemingly excessive mathematical precision.</p>
+                        <p>Fluid grids are a very important part of creating a responsive design, but they can only take us so far. When the width of the browser becomes too narrow, the design can start to severely break down. For example, a complex three-column layout isn’t going to work very well on a small mobile phone. Fortunately, responsive design has taken care of this problem by using media queries.</p>
+                        <h2 id="media_queries">Media Queries</h2>
+                        <p>The second part of responsive design is CSS3 media queries, which currently enjoy decent support across many modern browsers. If you’re not familiar with CSS3 media queries, they basically allow you to gather data about the site visitor and use it to conditionally apply CSS styles. For our purposes, we’re primarily interested in the min-width media feature, which allows us to apply specific CSS styles if the browser window drops below a particular width that we can specify. If we wanted to apply some styling to mobile phones, our media query might look something like the following.</p>
+                        
+                        <div class="wp-geshi-highlight">
+                            <div class="css">
+                                <pre class="de1">
+                                    <span class="re2">@media</span> screen and <span class="br0">(</span><span class="kw1">min-width</span><span class="sy0">:</span> <span class="re3">480px</span><span class="br0">)</span> <span class="br0">{</span>
+                                    &nbsp;
+                                    <span class="re1">.content</span> <span class="br0">{</span>
+                                        <span class="kw1">float</span><span class="sy0">:</span> <span class="kw2">left</span><span class="sy0">;</span>
+                                    <span class="br0">}</span>
+                                    &nbsp;
+                                    <span class="re1">.social_icons</span> <span class="br0">{</span>
+                                        <span class="kw1">display</span><span class="sy0">:</span> <span class="kw2">none</span>
+                                    <span class="br0">}</span>
+                                    &nbsp;
+                                    // and so on...
+                                    &nbsp;
+                                    <span class="br0">}</span>
+                                </pre>
+                            </div>
+                        </div>
+                        
+                        <p>Using a series of media queries like this, we can work our way up towards larger resolutions. The set of pixel widths I recommend targeting are as follows:</p>
+
+                        <ul>
+                            <li>320px</li>
+                            <li>480px</li>
+                            <li>600px</li>
+                            <li>768px</li>
+                            <li>900px</li>
+                            <li>1200px</li>
+                        </ul>
+
+                        <p>Again, these are just recommended, and should serve as a starting point. In an ideal world, you would adjust your layout to perfectly match every device width, but often times you have to pick and choose where you spend your efforts. From a more practical perspective, the resolutions that a design targets will be based on the resolutions of the people using that design, time and budget constraints, highly contextual situations, and so on. In summary, when deciding what resolutions to target, you should use your judgement. Targeting more resolutions is going to take more time, and assuming you’re not an immortal being with unlimited time, that effort should be spent carefully.</p>
+                        <p>Again, to see a responsive design in action, simply open this article up on a desktop browser and slowly resize the browser to make it thinner. You should see all the page elements adjusting themselves automagically to fit the new width, going all the way down to the size of a mobile browser.</p>
+                        <h2 id="resources">Resources</h2>
+                        <p>Responsive web design is about a year old now, and there are plenty of resources that can help you learn more about it. On our high-quality video training service&nbsp;<a href="http://teamtreehouse.com">Treehouse,</a>&nbsp;we have many videos that go in depth on the topic. Here are some links:</p>
+                        <ul>
+                        <li><a href="http://teamtreehouse.com/library/websites/build-a-responsive-website/">Responsive Web Design Video Course</a> on Treehouse</li>
+                        <li><a href="http://membership.teamtreehouse.com/blog/library/responsive-web-design/mockups-for-responsive-design/introduction?cid=182">Video: Introduction to Responsive Web Design</a></li>
+                        <li><a href="http://www.alistapart.com/articles/responsive-web-design/">Ethan Marcotte’s article on Responsive Web Design</a></li>
+                        <li><a href="http://www.w3.org/TR/css3-mediaqueries/">The W3C specification for CSS3 Media Queries</a></li>
+                        <li><a href="http://www.smashingmagazine.com/2011/07/22/responsive-web-design-techniques-tools-and-design-strategies/">A great roundup of responsive design techniques via Smashing Magazine</a></li>
+                        <li><a href="http://www.targetlocal.co.uk/responsive-web-design-resources/">A large list of responsive design resources</a></li>
+                        </ul>
+                        <p>Hopefully this article helped, but if you’re still feeling confused about responsive design, don’t be afraid to leave a question or comment. If you’re already utilizing responsive web design in your site or web application, share the link here so we can see!</p>
+                        <h2>Bonus</h2>
+                        <p>We’re starting to add free Youtube videos on responsive web design so if you’re interested in learning more, you can subscribe to our channel here: http://trhou.se/subscribe-treehouse-yt</p>
+                        <p>Here’s a video to start:</p>
+                        <center><div class="fluid-width-video-wrapper" style="padding-top: 56.25%;"><iframe src="http://www.youtube.com/embed/iSY38POjLYc" frameborder="0" allowfullscreen="allowfullscreen" id="fitvid0"></iframe></div></center>
+                        <p style="text-align: left;"><em>Comments on this article are now closed. Check out our updated article: <a href="http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design">The 2014 Guide to Responsive Web Design</a></em></p>
+                        <p>&nbsp;</p>
+                        <hr>
+                        <h5 style="text-align: center;">Earn a <a href="http://teamtreehouse.com/techdegree/front-end-web-development?cid=6282&amp;utm_source=post&amp;utm_medium=blog&amp;utm_content=top-performing&amp;utm_campaign=blog-may-2016">Front End Web Development Techdegree</a> and become a certified&nbsp;Developer.</h5>
+                        <h5 style="text-align: center;">Learn more about the <a href="http://teamtreehouse.com/techdegree?cid=6282&amp;utm_source=post&amp;utm_medium=blog&amp;utm_content=top-performing&amp;utm_campaign=blog-may-2016">Techdegree Program</a>&nbsp;today.</h5>
+                    </div>
+                    <ul class="tag-bar"><li><a href="http://blog.teamtreehouse.com/tag/adaptive" rel="tag">adaptive</a></li><li><a href="http://blog.teamtreehouse.com/tag/featured" rel="tag">Featured</a></li><li><a href="http://blog.teamtreehouse.com/tag/fluid" rel="tag">fluid</a></li><li><a href="http://blog.teamtreehouse.com/tag/make-a-website" rel="tag">make a website</a></li><li><a href="http://blog.teamtreehouse.com/tag/responsive-web-design" rel="tag">responsive web design</a></li></ul>
+                </article>
+            </div>
+            <div class="sidebar col col-sm12 col-md-4 col-lg-3">
+                <ul class="social">
+                    <li><a href="http://facebook.com/teamtreehouse" class="facebook"></a></li>
+                    <li><a href="http://twitter.com/treehouse" class="twitter"></a></li>
+                    <li><a href="http://plus.google.com/110278003536476194286/posts" class="google-plus"></a></li>
+                    <li><a href="http://youtube.com/gotreehouse" class="youtube"></a></li>
+                    <li><a href="http://linkedin.com/company/treehouse-island-inc-" class="linkedin"></a></li>
+                </ul>
+                <svg class="treehouse-icon" viewBox="0 0 188 32" preserveAspectRatio="xMinYMin meet" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <use class="icon-logo" xlink:href="#icon-logo" />
+                    <use class="icon-treehouse" xlink:href="#icon-treehouse-ff" />
+                </svg>
+                <div class="clearfix"></div>
+                <p>Treehouse brings affordable technology education to people everywhere in order to help them achieve their dreams and change the world.</p>
+
+                <div class="newsletter">
+                        <div id="mc_embed_signup">
+                        <form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+                            <h2>Stay Updated</h2>
+                            <p>
+                            Sign up for our newsletter, and we'll send you news and tutorials
+                            on web design, coding, business, and more! <strong>You'll also receive these
+                            great gifts:</strong>
+                            </p>
+                            <ul class="newsletter-benefits">
+                            <li>
+                            <span class="ss-icon check">check</span>
+                            <span class="benefit"><strong>Art and the Web: Line, Shape, and Form</strong> - An eBook by Treehouse Teacher Nick Pettit.</span>
+                            </li>
+                            <li>
+                            <span class="ss-icon check">check</span>
+                            <span class="benefit"><strong>On Freelancing</strong> - An audiobook about running your own business by Simon Collison.</span>
+                            </li>
+                            <li>
+                            <span class="ss-icon check">check</span>
+                            <span class="benefit"><strong>Cubano</strong> - A confident, yet friendly display sans serif font by Chandler Van De Water.</span>
+                            </li>
+                            <li>
+                            <span class="ss-icon check">check</span>
+                            <span class="benefit"><strong>Stock Photograph Set</strong> - 25 stunning photographs by Mike Kus. </span>
+                            </li>
+                            <li class="last">
+                            <span class="ss-icon check">check</span>
+                            <span class="benefit"><strong>Background Patterns Set</strong> - 28 background pattern images by Mike Kus. </span>
+                            </li>
+                            </ul>
+                            <div class="mc-field-group">
+                            <label for="mce-FNAME">First Name </label>
+                            <input type="text" value="" name="FNAME" class="required" placeholder="First Name" id="mce-FNAME">
+                            <span class="ss-icon">👤</span>
+                            </div>
+                            <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address </label>
+                            <input type="email" value="" name="EMAIL" class="required email" placeholder="Email Address" id="mce-EMAIL">
+                            <span class="ss-icon">✉</span>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </form>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <section>
+            <div class="rainbow_to_right"></div>
+        </section>
+    </footer>
+</body>
+</html>
